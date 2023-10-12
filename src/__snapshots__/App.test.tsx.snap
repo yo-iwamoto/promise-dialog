@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > DOM snapshot matches 1`] = `
+<DocumentFragment>
+  <h1
+    class="flex min-h-screen items-center justify-center text-center text-5xl font-bold italic"
+  >
+    Hello Vite⚡️
+  </h1>
+</DocumentFragment>
+`;
