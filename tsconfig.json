@@ -15,19 +15,9 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "incremental": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "module": "esnext",
-    "resolveJsonModule": true,
-    "types": ["vitest/globals"],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "resolveJsonModule": true
   },
-  "include": ["src" ],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

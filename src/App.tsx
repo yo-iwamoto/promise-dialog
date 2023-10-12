@@ -1,7 +1,30 @@
+import { DialogArea, useDialog } from './Dialog';
+
 export function App() {
+  const { showDialog } = useDialog();
+
+  const onClickButton = async () => {
+    const confirmed = await showDialog({
+      title: 'データの送信',
+      content: '本当に送信しますか？',
+    });
+    if (!confirmed) {
+      alert('キャンセルしました');
+      return;
+    }
+
+    alert('送信しました');
+  };
+
   return (
-    <h1 className='flex min-h-screen items-center justify-center text-center text-5xl font-bold italic'>
-      Hello Vite⚡️
-    </h1>
+    <>
+      <main>
+        <button type='button' onClick={onClickButton}>
+          送信
+        </button>
+      </main>
+
+      <DialogArea />
+    </>
   );
 }
